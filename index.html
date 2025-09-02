@@ -11,41 +11,41 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden; /* Hide scrollbars if content slightly overflows */
+    overflow: hidden;
   }
 
   .promo-widget {
-    display: flex; /* Use flex to align items vertically */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
+    display: flex; /* Use flex for horizontal alignment */
+    align-items: center; /* Vertically align icon and text container */
+    justify-content: center; /* Center content horizontally */
 
-    padding: 15px 30px; /* Increased padding for better spacing */
-    background-color: transparent; /* REMOVED FILL */
+    padding: 15px 30px;
+    background-color: transparent;
     border-radius: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.8);
+    border: 3px solid rgba(255, 255, 255, 0.8); /* THICKER BORDER */
     color: white;
-    font-family: 'Inter', sans-serif; /* Applied Inter font */
-    font-size: 18px; /* Slightly larger font */
-    font-weight: 700; /* Bolder for impact */
-    text-align: center; /* Center text lines */
-    white-space: nowrap; /* Prevent original text from wrapping if it gets too long */
-
-    /* Animation remains */
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    white-space: nowrap; /* Prevent original text from wrapping */
+    
     animation: pulse-glow 2.5s infinite ease-in-out;
   }
   
   .promo-icon {
-    height: 28px; /* Slightly larger icon */
-    width: 28px;
-    margin-bottom: 8px; /* Space between icon and first line of text */
+    height: 32px; /* Slightly larger icon */
+    width: 32px;
+    margin-right: 15px; /* Space between icon and text block */
+    flex-shrink: 0; /* Prevent icon from shrinking */
   }
 
-  .promo-text-line {
+  .promo-text-container {
+    display: flex;
+    flex-direction: column; /* Stack text lines vertically */
+    align-items: flex-start; /* Align text lines to the left */
     line-height: 1.2; /* Adjust line height for better spacing */
   }
 
-  /* Keyframes for the Animation */
   @keyframes pulse-glow {
     0% {
       transform: scale(1);
@@ -66,8 +66,10 @@
 
   <div class="promo-widget">
     <img src="gifticon.png" alt="Promo Icon" class="promo-icon">
-    <div class="promo-text-line">Start Quiz &</div>
-    <div class="promo-text-line">Get 30% OFF</div>
+    <div class="promo-text-container">
+      <div class="promo-text-line">Start Quiz &</div>
+      <div class="promo-text-line">Get 30% OFF</div>
+    </div>
   </div>
 
 </body>
