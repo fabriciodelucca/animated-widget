@@ -15,35 +15,35 @@
   }
 
   .promo-widget {
-    display: flex; /* Use flex for horizontal alignment */
-    align-items: center; /* Vertically align icon and text container */
-    justify-content: center; /* Center content horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    padding: 15px 30px;
+    padding: 20px 35px; /* CHANGED: Increased padding for a bigger widget */
     background-color: transparent;
-    border-radius: 50px;
-    border: 3px solid rgba(255, 255, 255, 0.8); /* THICKER BORDER */
+    border-radius: 60px; /* CHANGED: Increased border-radius for a rounder look */
+    border: 4px solid rgba(255, 255, 255, 0.8); /* CHANGED: Thicker border */
     color: white;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+    font-size: 22px; /* CHANGED: Larger font size */
     font-weight: 700;
-    white-space: nowrap; /* Prevent original text from wrapping */
+    white-space: nowrap;
     
     animation: pulse-glow 2.5s infinite ease-in-out;
   }
   
   .promo-icon {
-    height: 32px; /* Slightly larger icon */
-    width: 32px;
-    margin-right: 15px; /* Space between icon and text block */
-    flex-shrink: 0; /* Prevent icon from shrinking */
+    height: 40px; /* CHANGED: Bigger icon */
+    width: 40px;  /* CHANGED: Bigger icon */
+    margin-right: 18px; /* CHANGED: Adjusted margin */
+    flex-shrink: 0;
   }
 
   .promo-text-container {
     display: flex;
-    flex-direction: column; /* Stack text lines vertically */
-    align-items: flex-start; /* Align text lines to the left */
-    line-height: 1.2; /* Adjust line height for better spacing */
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.3; /* CHANGED: Adjusted line height for bigger font */
   }
 
   @keyframes pulse-glow {
